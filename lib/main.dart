@@ -16,6 +16,35 @@ void main() {
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Center(
+      child: Row(
+        children: [
+          Expanded(
+            flex: 1,
+            child: FlatButton(
+              onPressed: () {
+                print('Left Button Pressed');
+              },
+              child: new Image.asset('images/dice1.png'),
+            ),
+
+//          child: Image(
+//            image: AssetImage('images/dice1.png'),
+//          ),
+          ),
+          Expanded(
+            flex: 1,
+            child: FlatButton(
+                onPressed: () {
+                  print('Right Button Pressed');
+                },
+                child: new Image.asset('images/dice1.png')),
+//          child: Image(
+//            image: AssetImage('images/dice1.png'),
+//          ),
+          )
+        ],
+      ),
+    );
   }
 }
